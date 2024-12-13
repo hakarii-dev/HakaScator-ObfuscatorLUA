@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lua Obfuscator</title>
+    <title>Obfuscator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Lua Obfuscator</h1>
-            <p>Protect your Lua code with our simple and secure obfuscation tool.</p>
-        </header>
-        <main>
-            <textarea id="luaCode" placeholder="Paste your Lua code here..."></textarea>
-            <button onclick="obfuscateLua()">Obfuscate</button>
-            <textarea id="obfuscatedCode" placeholder="Your obfuscated code will appear here..." readonly></textarea>
-        </main>
-        <footer>
-            <p>© 2024 Lua Obfuscator. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+    <header class="navbar">
+        <div class="logo">
+            <span class="highlight">Yasu</span>scator
+        </div>
+        <div class="menu">Obfuscator</div>
+    </header>
+    <main>
+        <div class="obfuscator-container">
+            <h1>Obfuscator</h1>
+            <p>Upload Your File Here!</p>
+            <form id="uploadForm">
+                <label for="fileInput" class="file-button">Select Script</label>
+                <input type="file" id="fileInput" accept=".lua, .txt" hidden>
+                <p id="fileName">No File Chosen</p>
+                <small>Only receive .lua or .txt file!</small>
+                <input type="text" id="encryptKey" placeholder="ENCRYPT KEY">
+                <small>For encrypt and decrypt script.</small>
+                <button type="button" onclick="obfuscate()">OBFUSCATE</button>
+            </form>
+        </div>
+    </main>
 </body>
+<script src="script.js"></script>
 </html>
