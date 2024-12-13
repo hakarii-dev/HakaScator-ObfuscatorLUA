@@ -1,7 +1,12 @@
 function obfuscateLua() {
     const luaCode = document.getElementById("luaCode").value;
-    // Simulasi proses obfuscate (gunakan library nyata di sini)
-    const obfuscatedCode = luaCode.split("").reverse().join(""); // Ini hanya contoh dasar
+    if (!luaCode.trim()) {
+        alert("Please paste your Lua code to obfuscate.");
+        return;
+    }
+
+    // Example simple obfuscation (reverse code logic)
+    const obfuscatedCode = luaCode.split("").reverse().join("");
 
     document.getElementById("obfuscatedCode").value = obfuscatedCode;
 }
